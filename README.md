@@ -179,7 +179,7 @@
 2. Клонируйте репозиторий:
 
    ```bash
-   git clone https://github.com/Adlerprogr/GuestAPIManager
+   git clone git@github.com:Adlerprogr/ApiUsers.git
    ```
 
 3. Настройте файл `.env`:
