@@ -17,9 +17,9 @@ class StoreUserRequest extends FormRequest
     public function rules(): array
     {
         return [
-            'name' => ['sometimes', 'string', 'max:255'],
-            'email' => ['sometimes', 'email', Rule::unique('users')->ignore($this->user)],
-            'age' => ['sometimes', 'integer', 'min:1'],
+            'name' => ['required', 'string', 'max:255'],
+            'email' => ['required', 'email', Rule::unique('users')],
+            'age' => ['required', 'integer', 'min:1'],
         ];
     }
 

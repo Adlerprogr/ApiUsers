@@ -3,7 +3,6 @@
 namespace App\Http\Controllers;
 
 use App\Services\UserService;
-use App\Http\Requests\StoreUserRequest;
 use App\Http\Requests\UpdateUserRequest;
 use App\Http\Resources\UserResource;
 use App\DTO\UserDTO;
@@ -103,7 +102,7 @@ class UserController extends Controller
      *     )
      * )
      */
-    public function store(StoreUserRequest $request): UserResource
+    public function store(UpdateUserRequest $request): UserResource
     {
         $userDTO = new UserDTO($request->validated());
         $user = $this->userService->create($userDTO);
